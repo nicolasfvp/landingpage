@@ -1,101 +1,78 @@
-import Image from "next/image";
+"use client";
+
+import './globals.css';
+import Header from '../components/Header';
+import { Button } from '@/components/ui/button';
+import SecondSection from '@/components/SecondSection';
+import ThirdSection from '@/components/ThirdSection';
+import FourthSection from '@/components/FourthSection';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+    <div className="relative min-h-screen bg-cover bg-center md:bg-[url('/imgs/img1.png')] bg-[url('/imgs/imgMobile1.png')]">
+      <Header />
+      <div className="md:hidden">
+        <hr className="border-0 h-0.5 bg-gradient-to-r from-gradientStart to-gradientEnd" />
+      </div>
+      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-[16vh] text-center md:items-start md:text-left md:max-w-[50%] md:ml-0">
+        <h1 className="text-4xl font-michroma mb-2">
+          Descubra seu
+          <br />
+          potencial na
+        </h1>
+        <h1 className="text-4xl font-michroma bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text text-transparent">
+          UNDEFINED
+        </h1>
+        
+        <p className="mt-4 font-worksans text-xs md:text-lg">
+          Desenvolva suas habilidades técnicas e transcenda seus limites na Undefined, a empresa que capacita jovens talentos para brilhar no mercado de programação e UX/UI Design.
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="mt-8 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row items-center">
+        <a href="#" className="relative bg-transparent">
+          <img src="/imgs/btn1.png" alt="Marque sua mentoria" className="rounded-lg cursor-pointer" />
+        </a>
+        <a href="#" className="relative">
+          <img src="/imgs/btn2.png" alt="Ver cursos" className="rounded-lg cursor-pointer" />
+        </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+    </div>
+    <SecondSection></SecondSection>
+    <ThirdSection></ThirdSection>
+    <FourthSection></FourthSection>
+    <footer className="bg-[#010921]">
+      {/* Imagem Linha 1 */}
+      <img src="/imgs/linha1.png" alt="Linha 1" className="w-full" />
+
+      {/* Conteúdo do footer */}
+      <div className="flex flex-row items-center justify-between p-4">
+        <div className="text-center">
+          <h1 className="text-white font-michroma text-lg">UNDEFINED</h1>
+          <p className="text-gray-400 text-xs">
+            <span className="text-gray-400">&copy;</span> 2024 Todos direitos reservados
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <h2 className="text-white font-michroma text-sm">Nos acompanhe</h2>
+          <div className="flex space-x-4 mt-2">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-white text-2xl hover:text-gray-400" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-white text-2xl hover:text-gray-400" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Imagem Linha 2 */}
+      <img src="/imgs/linha2.png" alt="Linha 2" className="w-full" />
+    </footer>
     </div>
   );
 }
