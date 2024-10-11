@@ -45,10 +45,9 @@ export default function Home() {
     <ThirdSection></ThirdSection>
     <FourthSection></FourthSection>
     <footer className="bg-[#010921]">
-      {/* Imagem Linha 1 */}
       <img src="/imgs/linha1.png" alt="Linha 1" className="w-full" />
 
-      {/* Conteúdo do footer */}
+
       <div className="flex flex-row items-center justify-between p-4">
         <div className="text-center">
           <h1 className="text-white font-michroma text-lg">UNDEFINED</h1>
@@ -70,7 +69,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Imagem Linha 2 */}
       <img src="/imgs/linha2.png" alt="Linha 2" className="w-full" />
     </footer>
     </div>

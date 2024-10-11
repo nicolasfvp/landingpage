@@ -33,7 +33,7 @@ export default function Header() {
           <a href="#" className="font-michroma">Talentos</a>
         </nav>
 
-        {/* Botão de menu para mobile */}
+
         <Button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden bg-transparent"

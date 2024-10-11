@@ -13,20 +13,16 @@ export default function SecondSection() {
   useEffect(() => {
     if (!api) return;
 
-    // Define o número total de slides
     setTotalSlides(api.scrollSnapList().length);
 
-    // Atualiza o índice atual
     const updateCurrentIndex = () => {
       setCurrentIndex(api.selectedScrollSnap());
     };
 
     updateCurrentIndex();
 
-    // Ouve o evento "select" para atualizar o índice quando o slide mudar
     api.on("select", updateCurrentIndex);
 
-    // Verifica o tamanho da tela (mobile ou desktop)
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -65,7 +61,6 @@ export default function SecondSection() {
         <h2 className="text-3xl font-michroma text-white text-center z-20 py-[5vh]">Nossos serviços</h2>
       </div>
 
-      {/* Carrossel */}
       <div className="mt-8 relative">
         {/* Botões de navegação (esquerda e direita) - visíveis apenas na versão desktop */}
         <button
