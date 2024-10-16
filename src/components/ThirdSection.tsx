@@ -36,8 +36,8 @@ export default function ThirdSection() {
 
   return (
     <div className="relative min-h-screen bg-cover bg-center md:bg-[url('/imgs/img3.png')] bg-[url('/imgs/imgMobile3.png')]">
-      {/* Título centralizado */}
-      <div className="flex flex-col justify-center items-center pt-16">
+      <div className="max-w-[1200px] m-auto">
+        <div className="flex flex-col justify-center items-center pt-16">
         <h1 className="text-4xl font-michroma text-white text-center">
           Descubra Nossas Aventuras Criativas!
         </h1>
@@ -95,7 +95,7 @@ export default function ThirdSection() {
         </div>
       ) : (
         /* Grid para desktop */
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 md:pb-[10vh] px-[10vw]">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 md:pb-[10vh]">
           {/* 6 cards dispostos em 3 colunas e 2 linhas */}
           {Array.from({ length: 6 }).map((_, index) => (
             <div key={index} className="flex justify-center">
@@ -109,6 +109,8 @@ export default function ThirdSection() {
           ))}
         </div>
       )}
+      </div>
+      
     </div>
   );
 }
